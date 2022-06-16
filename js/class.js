@@ -5,6 +5,7 @@ class Dress {
         this.useFor = useFor;
     }
     genPrice(price){
+        console.log(this);
         console.log(price)
     }
     sum=(n1,n2) => n1+n2
@@ -17,10 +18,30 @@ class Hat extends Dress{
     }
 }
 
+class Shirt{
+    constructor(size,color,paint){
+        this.size = size;
+        this.color = color;
+        this.paint = paint;
+    }
+}
+
+
 
 const pant = new Dress('pant','black','adult');
-console.log(pant);
+// console.log(pant);
 pant.genPrice(100);
+
+const tShirt = new Shirt('small','grey', 'check');
+tShirt.genPrice = pant.genPrice
+tShirt.genPrice(150);
+hello();
+
+function hello(){
+    console.log('hi ki obostha?')
+    console.log(this);
+}
+console.log(tShirt);
 
 const monkeyHat = new Hat('headWear','yellow','child','250cm');
 console.log(monkeyHat);
@@ -30,9 +51,10 @@ console.log(sumy);
 
 
 
-setTimeout(()=>console.log('hi'),900)
+setTimeout(()=>console.log('hi'),3000)
+setTimeout(()=>console.log('hiFast'),2009)
 
 
-for(let i = 0; i<10000;i++){
+for(let i = 0; i<100;i++){
     console.log(i);
 }
