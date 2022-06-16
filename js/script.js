@@ -51,9 +51,10 @@ cycleCompany('Duronto');
 cycleLocation('Bangladesh');
 console.log(cycle, car, bike); 
 
-cycle.desc = bike.desc;
+// cycle.desc = bike.desc;
 car.desc = bike.desc;
+bike.desc.call(cycle);
 
 bike.desc();
 car.desc();
-cycle.desc();
+// cycle.desc();
